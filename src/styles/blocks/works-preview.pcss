@@ -1,0 +1,42 @@
+.works-preview{
+    display: flex;
+    position: relative;
+    &::before{
+        content: attr(data-slide);
+        position: absolute;
+        top: -10%;
+        right: 25%;
+        line-height: 1;
+        font-size: 400px;
+        font-weight: 800;
+        color: #E6E6E6;
+    }
+}
+.works-preview__pictures{
+    width: 60%;
+    position: relative;
+    margin-right: 13%;
+}
+.works-preview__thumbs{
+    position: absolute;
+    bottom: 14%;
+}
+.works-preview__btns{
+    position: absolute;
+    right: -37px;
+    bottom: 54px;
+}
+.works-preview__info{
+    flex: 1;
+}
+.works-preview__title{
+    font-size: 30px;
+    font-weight: 700;
+    color: $darkBlue;
+    margin-bottom: 35px;
+}
+.works-preview__desc{
+    color: $darkBlue;
+    opacity: 0.8;
+    margin-bottom: 45px;
+}

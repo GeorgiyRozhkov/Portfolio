@@ -1,0 +1,22 @@
+.square-btns{
+    display: grid;
+}
+.square-btns__item{
+    width: 37px;
+    height: 37px;
+    background-color: $darkBlue !important;
+    &:hover{
+        .square-btns__icon{
+            fill: #fff;
+        }
+    }
+}
+.square-btns__item--prev{
+    .square-btns__icon{
+        transform: rotate(180deg);
+    }
+}
+.square-btns__icon{
+    width: 18px;
+    fill: #717883;
+}
