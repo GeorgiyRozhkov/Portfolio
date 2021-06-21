@@ -58,17 +58,17 @@ block content
                 li.skills__item
                     .skills-row
                         .skills-row__title #{category[0]}
-                            ul.skills-row__list 
-                                each skill in category[1]
-                                    li.skills-row__item 
-                                        .skill 
-                                            svg(viewBox="0 0 100 100").skill__circle-shape
-                                                circle(cx="50" cy="50" r="40").skill__circle.skill__circle--layer--under
-                                                circle(cx="50" cy="50" r="40" stroke="url(#gradient)").skill__circle.skill__circle--layer--above
-                                                linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
-                                                    stop(offset="0%" stop-color="#D0731B")
-                                                    stop(offset="100%" stop-color="#DC9322")
-                                            .skill__title #{skill}
+                        ul.skills-row__list 
+                            each skill in category[1]
+                                li.skills-row__item 
+                                    .skill 
+                                        svg(viewBox="0 0 100 100").skill__circle-shape
+                                            circle(cx="50" cy="50" r="40").skill__circle.skill__circle--layer--under
+                                            circle(cx="50" cy="50" r="40" stroke="url(#gradient)").skill__circle.skill__circle--layer--above
+                                            linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
+                                                stop(offset="0%" stop-color="#D0731B")
+                                                stop(offset="100%" stop-color="#DC9322")
+                                        .skill__title #{skill}
     section.works 
         .container.works__container 
             .works__title Мои работы
@@ -90,12 +90,12 @@ block content
                                 li.thumbs__item 
                                     a(href="#").thumbs__link
                                         +image(`content/prev3.png`, "thumbs__pic") 
-                        .works-preview__btns
-                            .square-btns 
-                                button(type="button").square-btns__item.square-btns__item--next 
-                                    +icon("arrow-down", "square-btns__icon")                             
-                                button(type="button").square-btns__item.square-btns__item--prev
-                                    +icon("arrow-down", "square-btns__icon")                               
+                            .works-preview__btns
+                                .square-btns 
+                                    button(type="button").square-btns__item.square-btns__item--next 
+                                        +icon("arrow-down", "square-btns__icon")                             
+                                    button(type="button").square-btns__item.square-btns__item--prev
+                                        +icon("arrow-down", "square-btns__icon")                               
                     .works-preview__info 
                         - var tags = ["HTML", "CSS", "Javascript"];
                         ul.tags 

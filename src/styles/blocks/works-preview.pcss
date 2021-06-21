@@ -4,30 +4,32 @@
     &::before{
         content: attr(data-slide);
         position: absolute;
-        top: -10%;
-        right: 25%;
+        top: 0%;
+        right: 15%;
         line-height: 1;
         font-size: 400px;
         font-weight: 800;
         color: #E6E6E6;
     }
 }
+.works-preview__content{
+    display: flex;
+}
 .works-preview__pictures{
-    width: 60%;
     position: relative;
-    margin-right: 13%;
+    margin-right: 50px;
 }
 .works-preview__thumbs{
-    position: absolute;
-    bottom: 14%;
+    transform: translate(0, -150%);
 }
 .works-preview__btns{
     position: absolute;
     right: -37px;
-    bottom: 54px;
+    bottom: 0;
 }
 .works-preview__info{
     flex: 1;
+    position: relative;
 }
 .works-preview__title{
     font-size: 30px;
