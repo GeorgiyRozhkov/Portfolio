@@ -1,11 +1,14 @@
 .footer{
     background: #222427;
-    padding: 75px 0;
+    padding: 10% 0;
     color: rgba($text-color, 0.3);
 }
 .footer__container{
     display: flex;
     align-items: flex-start;
+    @include phones{
+        flex-direction: column;
+    }
 }
 .footer__side-left{
     display: flex;
@@ -20,24 +23,55 @@
     padding-top: 1%;
 }
 .footer__name{
-    padding-right: 50%;
     padding-top: 6%;
     margin-bottom: 10%;
     color: $text-color;
     font-size: 18px;
     font-weight: 700;
 }
-.footer__desc{
+.footer__desc, .footer__name{
     padding-right: 50%;
+    @include phones{
+        padding-right: 0;
+    }
 }
+
 .footer__side-right{
     display: flex;
     flex: 1;
     flex-direction: column;
 }
+.footer__side-right--screen--desktop{
+    display: flex;
+    @include tablets{
+        display: none;
+    }
+}
+.footer__side-right--screen--tablets{
+    display: none;
+    @include tablets{
+        display: flex;
+        .footer__text{
+            margin-bottom: 5%;
+        }
+        .socials{
+            margin-bottom: 5%;
+        }
+        .quote__text{
+            margin-bottom: 5%;
+        }
+    }
+}
 .footer__menu{
+    display: block !important;
     padding-top: 2%;
     margin-bottom: 5%;
+    .menu__item{
+        margin-right: 5%;
+    }
+    @include phones{
+        padding: 15% 0px;
+    }
 }
 .footer__content{
     display: flex;

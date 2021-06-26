@@ -1,6 +1,17 @@
 .socials{
     display: flex;
 }
+.socials--main{
+    @include phones{
+        display: none;
+    }
+}
+.socials--modal{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%);
+}
 .socials__item{
     margin-right: 35px;
     &:last-child{
@@ -25,4 +36,7 @@
     width: 25px;
     height: 25px;
     fill: rgba($text-color, 0.6);
+}
+.socials__icon--modal{
+    fill: $blue;
 }

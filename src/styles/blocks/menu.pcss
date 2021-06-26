@@ -1,5 +1,17 @@
 .menu{
     color: rgba($text-color, 0.6);
+    @include tablets{
+        display: none;
+    }
+}
+.menu--modal{
+    color: $blue;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+
 }
 .menu--theme--white{
     color: $text-color;
@@ -7,9 +19,29 @@
 .menu__list{
     display: flex;
 }
+.menu__list--footer{
+    @include phones{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+.menu__list--modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .menu__item{
     margin-right: 60px;
     &:last-child{
         margin-right: 0;
     }
+}
+
+.menu__item--modal{
+    margin-right: 0;
+    font-size: 18px;
+    margin-bottom: 20%;
+    font-weight: 700;
 }

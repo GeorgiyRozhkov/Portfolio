@@ -1,14 +1,25 @@
 .about__container{
     display: flex;
     align-items: center;
+    @include phones{
+        flex-direction: column;
+    }
 }
 .about__user{
     width: 40%;
-    margin-top: 67px;
+    margin-top: 5%;
+    @include phones{
+        width: 100%;
+        margin-bottom: 15%;
+    }
 }
 .about__content{
     flex: 1;
     color: rgba($text-color, 0.8);
+    padding: 0 8%;
+    @include phones{
+        padding: 0;
+    }
 }
 .about__desc .about__info{
     font-weight: 600;
@@ -18,7 +29,7 @@
     margin-bottom: 21px;
 }
 .about__info{
-    margin-bottom: 77px;
+    margin-bottom: 10%;
 }
 .about__title{
     font-weight: 700;

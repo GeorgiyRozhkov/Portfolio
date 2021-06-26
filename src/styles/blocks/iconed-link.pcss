@@ -7,6 +7,13 @@
         color: $darkBlue;
         opacity: 1;
     }
+    @include tablets{
+        width: 100%;
+        justify-content: center;
+    }
+    @include phones{
+        justify-content: start;
+    }
 }
 .iconed-link__icon{
     margin-right: 5%;

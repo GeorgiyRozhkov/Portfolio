@@ -1,6 +1,10 @@
 .tags{
     display: flex;
-    margin-bottom: 35px;
+    margin-bottom: 10%;
+    @include phones{
+        width: 100%;
+        justify-content: space-around;
+    }
 }
 .tags__item{
     margin-right: 8px;

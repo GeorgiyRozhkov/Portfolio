@@ -1,5 +1,5 @@
 .review{
-    height: 225px;
+    min-height: 225px;
     width: 375px;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,9 @@
     width: 77px;
     left: -25%;
     fill: $grey;
+    @include tablets{
+        display: none;
+    }
 }
 .review__text{
     font-weight: 600;

@@ -5,6 +5,7 @@ block content
         section.hero 
             .container.hero__container 
                 header.header 
+                    .logo РГ
                     nav.menu
                         -var menuItems = ["Обо мне", "Навыки", "Работы", "Отзывы"];
                         ul.menu__list 
@@ -12,14 +13,19 @@ block content
                                 li.menu__item 
                                     a(href="#").menu__link #{item}
                     - var socials = ["insta", "vk", "github", "envelope"];              
-                    ul.socials
+                    ul.socials.socials--main
                         each item in socials 
                             li.socials__item
                                 a(href="#").socials__icon
                                     +icon(item, "socials__icon")
+                    a.hamburger(href="#")
+                        span.hamburger__line  
+                        span.hamburger__line  
+                        span.hamburger__line  
                 .hero__content 
                     h2.hero__title личный сайт веб-разработчика
                     h1.hero__name Рожков Георгий
+                        
                 a(href="#").hero__scroll Let's go!
                     +icon("arrow-down", "hero__scroll-icon")
         section.about 
@@ -48,27 +54,7 @@ block content
     section.values 
         .values__title Чем я могу быть полезен вам
         .values__widget
-        - 
-            var skillsCategories = [
-                ["Frontend", ["HTML", "CSS", "Javascript", "Vue"]],
-                ["Workflow", ["Git", "Terminal", "Gulp", "Webpack"]],
-            ];
-        ul.skills 
-            each category in skillsCategories
-                li.skills__item
-                    .skills-row
-                        .skills-row__title #{category[0]}
-                        ul.skills-row__list 
-                            each skill in category[1]
-                                li.skills-row__item 
-                                    .skill 
-                                        svg(viewBox="0 0 100 100").skill__circle-shape
-                                            circle(cx="50" cy="50" r="40").skill__circle.skill__circle--layer--under
-                                            circle(cx="50" cy="50" r="40" stroke="url(#gradient)").skill__circle.skill__circle--layer--above
-                                            linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
-                                                stop(offset="0%" stop-color="#D0731B")
-                                                stop(offset="100%" stop-color="#DC9322")
-                                        .skill__title #{skill}
+            #skills-component
     section.works 
         .container.works__container 
             .works__title Мои работы
@@ -151,7 +137,7 @@ block content
                 .footer__year ©2020
                 .footer__name Георгий Рожков
                 .footer__desc Личный сайт веб-разработчика
-            .footer__side-right
+            .footer__side-right.footer__side-right--screen--desktop
                 nav.menu.menu--theme--white.footer__menu
                     -var menuItems = ["Обо мне", "Навыки", "Работы", "Отзывы"];
                         ul.menu__list 
@@ -169,5 +155,37 @@ block content
                     .quote
                         .quote__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                         .quote__author Martin Golding
-                            
+            .footer__side-right.footer__side-right--screen--tablets
+                nav.menu.menu--theme--white.footer__menu
+                    -var menuItems = ["Обо мне", "Навыки", "Работы", "Отзывы"];
+                        ul.menu__list.menu__list--footer
+                            each item in menuItems
+                                li.menu__item.menu__item--footer 
+                                    a(href="#").menu__link #{item}                   
+                .footer__info
+                    .footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
+                    ul.socials
+                            each item in socials 
+                                li.socials__item.socials__item--border--round
+                                    a(href="#").socials__icon
+                                        +icon(item, "socials__icon")
+                .quote
+                    .quote__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+                    .quote__author Martin Golding
+    .overlay    
+        nav.menu.menu--modal
+                    -var menuItems = ["Главная" ,"Обо мне", "Навыки", "Работы", "Отзывы"];
+                        ul.menu__list.menu__list--modal
+                            each item in menuItems
+                                li.menu__item.menu__item--modal 
+                                    a(href="#").menu__link #{item}
+        - var socials = ["insta", "vk", "github", "envelope"];
+        ul.socials.socials--modal
+            each item in socials 
+                li.socials__item.socials__item--modal.socials__item--border--round
+                    a(href="#").socials__icon.socials__icon--modal
+                        +icon(item, "socials__icon, socials__icon--modal")
+        .overlay__cross
+            +icon("cross", "overlay__cross-icon")
+
 
