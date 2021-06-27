@@ -1,0 +1,36 @@
+script(type="text/x-template")#slider-container  
+    .slider
+        .slider__header 
+            .slider__title Что обо мне говорят
+            .slider__btns 
+                button(type="button").round-btn.round-btn--prev  
+                    +icon("arrow-down", "round-btn__icon")  
+                button(type="button").round-btn.round-btn--next  
+                    +icon("arrow-down", "round-btn__icon")  
+        ul.slider__content 
+            li.slider__item.review
+                .review__decor
+                    +icon("quote", "review__decor-icon") 
+                .review__text
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! Пол года только самых тяжелых испытаний и бессонных ночей!
+                .review__user
+                    .user-display 
+                        .user-display__avatar
+                            .user-display__avatar-style 
+                                +image("content/kovalchuk.png", "user-display__img")
+                        .user-display__data 
+                            .user-display__name Ковальчук Дмитрий
+                            .user-display__desc Основатель Loftschool
+            li.slider__item.review
+                .review__decor
+                    +icon("quote", "review__decor-icon") 
+                .review__text
+                    p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                .review__user
+                    .user-display 
+                        .user-display__avatar
+                            .user-display__avatar-style 
+                                +image("content/sabantsev.png", "user-display__img")
+                        .user-display__data 
+                            .user-display__name Владимир Сабанцев
+                            .user-display__desc Перподаватель

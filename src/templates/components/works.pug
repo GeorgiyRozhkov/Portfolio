@@ -1,0 +1,48 @@
+script(type="text/x-template")#preview-container
+    .works-preview(data-slide="2")
+        display
+        info
+
+script(type="text/x-template")#preview-display
+    .works-preview__pictures
+        +image('content/prev.png', 'works-preview__img')
+        .works-preview__thumbs
+            thumbs  
+            .works-preview__btns
+                btns
+            
+script(type="text/x-template")#preview-thumbs
+    ul.thumbs
+        li.thumbs__item 
+            a(href="#").thumbs__link
+                +image(`content/prev.png`, "thumbs__pic") 
+        li.thumbs__item 
+            a(href="#").thumbs__link
+                +image(`content/prev1.png`, "thumbs__pic") 
+        li.thumbs__item 
+            a(href="#").thumbs__link
+                +image(`content/prev2.png`, "thumbs__pic") 
+        li.thumbs__item 
+            a(href="#").thumbs__link
+                +image(`content/prev3.png`, "thumbs__pic")
+script(type="text/x-template")#preview-btns
+    .square-btns 
+        button(type="button").square-btns__item.square-btns__item--next 
+            +icon("arrow-down", "square-btns__icon")                             
+        button(type="button").square-btns__item.square-btns__item--prev
+            +icon("arrow-down", "square-btns__icon")
+script(type="text/x-template")#preview-info
+    .works-preview__info 
+        tags
+        .works-preview__title Сайт школы образования
+        .works-preview__desc 
+            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        a(href="#").iconed-link
+            +icon("link", "iconed-link__icon")
+            .iconed-link__text Посмотреть сайт
+script(type="text/x-template")#preview-tags
+    - var tags = ["HTML", "CSS", "Javascript"];
+        ul.tags 
+            each item in tags 
+                li.tags__item 
+                    .tag #{item}
