@@ -60,7 +60,7 @@ export default {
       
       this.isSubmitDisabled = true;
       
-      $axios.post("admin#/login", this.user).then(response =>{
+      $axios.post("/login", this.user).then(response =>{
         const token = response.data.token;
         localStorage.setItem("token", token);
         $axios.defaults.headers["Authorization"] = `Bearer ${token}`;
