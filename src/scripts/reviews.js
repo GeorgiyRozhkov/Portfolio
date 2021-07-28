@@ -2,8 +2,6 @@ import Vue from "vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 
-
-
 new Vue({
   el: "#slider-component",
   template: "#slider-container",
@@ -13,11 +11,11 @@ new Vue({
   },
   data() {
     return {
-      reviews: [],
-      sliderOptions: {
-        slidesPerView: 2,
-        loop: false
-      }
+        reviews: [],
+        sliderOptions: {
+          slidesPerView: 1,
+          loop: true
+        }
     };
   },
   computed: {

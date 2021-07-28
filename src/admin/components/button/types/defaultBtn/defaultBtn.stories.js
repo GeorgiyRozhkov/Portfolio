@@ -14,7 +14,7 @@ export default {
 export const defaultView = () => ({
   components: { appButton },
   template: `
-    <appButton title="Send!" @click="onClick" />
+    <appButton title="Отправить" @click="onClick" />
   `,
   methods
 });

@@ -8,6 +8,7 @@
     "build": "webpack --mode=production --progress",
     "reg": "node reg-util.js",
     "storybook": "start-storybook -p 6006",
+    "test": "dev",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
@@ -62,6 +63,8 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "axios": "^0.21.1",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "pcss": "^1.0.0",
@@ -70,9 +73,11 @@
     "pug-cli": "^1.0.0-alpha6",
     "request": "^2.88.0",
     "signale": "^1.4.0",
+    "simple-vue-validator": "^0.16.0",
     "swiper": "^6.7.1",
     "vue": "^2.6.7",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2"
   }
 }
