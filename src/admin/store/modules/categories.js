@@ -40,21 +40,21 @@ export default {
     }
   },
   actions: {
-    async create({ commit }, title) {
+    async create(store , title) {
       try {
-        const { data } = await this.$axios.post('/categories', { title })
-        commit("ADD_CATEGORY", data);
+        const response = await this.$axios.post('/categories', { title })
       } catch (error) {
         throw new Error("произошла ошибка");
       }
     },
-    async fetch({ commit }) {
+    async fetch( {commit} ) {
       try {
-        const { data } = await this.$axios.get('/categories/1')
-        commit("SET_CATEGORIES", data)
+        const response = await this.$axios.get('/categories/491');
+        commit("SET_CATEGORIES", response.data)
       } catch (error) {
-        console.log(error);
+        throw new Error("произошла ошибка");
       }
-    }
+    },
+    
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div 
-    :class="['skill-add-line-component', {blocked: blocked}]"
+    :class="['skill-add-line-component']"
   >
     <div class="title">
       <app-input placeholder="Новый навык" />
